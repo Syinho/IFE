@@ -1,0 +1,42 @@
+/* 实现一个两栏布局，左侧占30%宽度，右侧占70%宽度 */
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html,body{
+    height: 100%;
+}
+header{
+    height: 10%;
+    width: 100%;
+    background: black;
+}
+footer{
+    width: 100%;
+    height: 10%;
+    background: black;
+    clear: both;
+}
+.layout{
+    height: 80%;
+    width: 100%;
+    overflow:hidden;
+}
+.left{
+    float: left;
+    width: 30%;
+    background: grey;
+    height: 100%;
+}
+.right{
+    float:right;
+    width: 70%;
+    background: white;
+    height: 100%;
+}
+.center{
+    display: none;
+}

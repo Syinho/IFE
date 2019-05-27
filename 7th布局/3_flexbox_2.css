@@ -1,0 +1,38 @@
+/* 实现一个三栏布局，左侧固定宽度，中间固定宽度，右侧根据浏览器宽度变化而自适应变化 */
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+header,footer{
+    width: 100%;
+    height: 10%;
+    background: black;
+    clear: both;
+}
+.layout{
+    width: 100%;
+    height: 80%;
+    display: flex;
+}
+.left{
+    width: 150px;
+    height: 100%;
+    background: grey;
+}
+.center{
+    width: 170px;
+    height: 100%;
+    background: white;
+}
+.right{
+    width:calc(100% - 320px);
+    height: 100%;
+    background: grey;
+}
