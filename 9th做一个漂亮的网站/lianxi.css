@@ -1,0 +1,24 @@
+.xxx{
+    height: 20px;
+    width: 30px;
+    margin:20px;
+    border: 1px solid black;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+.below1{
+    border: 1px solid black;
+    height: 80px;
+    width: 100px;
+    margin-top: 50px;
+}
+@media only screen and (min-width:600px){
+    .below2{
+        border: 1px solid black;
+        height: 80px;
+        width: 100px;
+        margin-top: 100px;
+    }
+}

@@ -1,0 +1,80 @@
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Mask</title>
+        <style type="text/css">
+            html,
+            body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+            }
+
+            .mask-container {
+                height: 200px;
+                width: 100%;
+                box-shadow: rgba(0, 0, 0, 0.3) 0 2px 2px;
+                position: relative;
+            }
+
+            .mask-bg {
+                width: 100%;
+                height: 220px;
+                position: absolute;
+                top: -10px;
+                filter: blur(10px);
+                -webkit-filter: blur(10px);
+                -moz-filter: blur(10px);
+                -o-filter: blur(10px);
+            }
+
+            .mask {
+                width: 100%;
+                height: 200px;
+                position: absolute;
+                background: rgba(255, 255, 255, 0.4);
+                top: 0;
+            }
+
+            .banner,
+            .mask-bg {
+                background-image: url('img/thirdpage.png');
+                background-size: cover;
+                background-position: center 0px;
+                background-repeat: no-repeat;
+            }
+
+            .banner {
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+            }
+        </style>
+                <script src=”http://libs.baidu.com/jquery/2.1.1/jquery.min.js”></script>
+    </head>
+
+    <body>
+        <div class="banner">
+            <!--设置背景-->
+            <div class="mask-container">
+                <!--构造毛玻璃容器-->
+                <div class="mask-bg"></div>
+                <!--毛玻璃的背景-->
+                <div class="mask"></div>
+                <!--毛玻璃中的内容-->
+            </div>
+        </div>
+
+        <script>
+            $(document).scroll(function () {
+                        scrollDistance = document.body.scrollTop; 
+                        //获取用户滚动的高度 
+                        $(".mask-bg").css({"background-position":"center "+((-scrollDistance)+"px")}); 
+                        //改变 .mask-bg 的 background-position
+                        });
+        </script>
+    </body>
+
+    </html>
